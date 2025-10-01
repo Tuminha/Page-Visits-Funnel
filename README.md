@@ -72,18 +72,27 @@ jupyter notebook  # or: jupyter lab
 #    - Page_Funnel_Visits_Solution.ipynb (reference)
 ```
 
-### What You’ll Learn/Practice
+### What You'll Learn/Practice
 
 - Left joins for stepwise funnels
 - Null analysis to quantify drop-off
 - Percentage conversion at each stage
 - End-to-end time-to-purchase calculation
+- Data quality issues: identifying when raw counts don't match funnel logic
+- Using `.nunique()` vs `.sum()` for accurate user counts
+
+### Key Insights
+
+- **Data Quality Check**: Raw table counts can be misleading (e.g., 252 purchases > 226 checkouts)
+- **Solution**: Use left merges and `.nunique()` on user_id for accurate funnel analysis
+- **Learning**: Always validate data consistency before drawing conclusions
 
 ### Suggested Improvements (Next Steps)
 
 - Parameterize the funnel steps and file names to re-use the notebook on other datasets
 - Add visualizations: bar charts for stage conversion, Sankey diagram for flow, and distribution of time-to-purchase
 - Export a concise summary report (Markdown/HTML) with key KPIs
+- Add data validation checks to identify anomalies early
 
 ### Screenshots (Optional)
 
